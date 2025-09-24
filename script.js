@@ -5,12 +5,12 @@ function addToCart() {
   const quantity = parseInt(document.getElementById('quantity').value) || 0;
   const pesticide = parseInt(document.getElementById('pesticide').value) || 0;
   const address = document.getElementById('deliveryAddress').value.trim();
-  const robotPrice = 250;   // Precio base por robot
-  const pesticidePrice = 15; // Precio por litro de pesticida
+  const robotPrice = 600;   // Precio base por robot
+  const pesticidePrice = 45; // Precio por litro de pesticida
 
   cartTotal = (quantity * robotPrice) + (pesticide * pesticidePrice);
 
-  let result = `Total: $${cartTotal}`;
+  let result = `Total: s/${cartTotal}`;
   if (address) result += ` | Envío a: ${address}`;
   document.getElementById('cart-total').textContent = result;
 }
